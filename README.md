@@ -13,7 +13,7 @@ Here's an example:
 class Main{
     public static void main(String[] args) {
         TableGenerator gen = new TableGeneratorImpl();
-        String data[][] = new String[2][4];
+        String data[][] = new String[2][4]; //two columns and 4 lines (first is the header)
 
         String html = gen.generateHtmlTable(data);
         System.out.println(html);
