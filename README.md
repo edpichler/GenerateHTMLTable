@@ -1,7 +1,7 @@
 #Generate HTML Tables
 Generate a beautiful HTML tables to show any data.
-* Generated **CSSs is inline** to be compatible with the major email clients.
-* The cells of the HTML Table **can contains HTML** stuff. 
+* **Generated CSSs is inline** to be compatible with the major email clients.
+* The cells of the HTML Table **can contains HTML** code. 
 
 
 ##How to use
