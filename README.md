@@ -10,7 +10,13 @@ Create a matrix representing your data. As said before, the matrix also can have
 Here's an example:
 
 ```java
-public static void main(){
-  console.log("notice the blank line before this function?");
+class Main{
+    public static void main(String[] args) {
+        TableGenerator gen = new TableGeneratorImpl();
+        String data[][] = new String[2][4];
+
+        String html = gen.generateHtmlTable(data);
+        System.out.println(html);
+    }
 }
 ```
