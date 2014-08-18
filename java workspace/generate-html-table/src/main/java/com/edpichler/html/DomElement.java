@@ -66,17 +66,6 @@ public class DomElement {
         return e;
     }
 
-    public static void main(String[] args) {
-        DomElement html = new DomElement("html");
-        DomElement body = new DomElement("body");
-        DomElement div = body.addChild("div");
-        div.setCssStyle("text-align:center;");
-        div.setContent("Content!");
-        html.addChild(body);
-
-        System.out.println(html);
-    }
-
     public String getCssStyle() {
         return cssStyle;
     }
