@@ -28,6 +28,9 @@ public class DomElement {
      * @param tag any tag. E.g.: body, div, td, tr, etc.
      */
     public DomElement(String tag) {
+        if(tag == null){
+            throw new IllegalArgumentException("Tag name cannot be null.");
+        }
         this.tag = tag;
     }
 
