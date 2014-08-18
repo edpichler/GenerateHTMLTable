@@ -10,3 +10,6 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/java workspace/easyPNR-html-exporter/.idea
+/java workspace/generate-html-table/generate-HTML-table.iml
+/java workspace/generate-html-table/target/classes
