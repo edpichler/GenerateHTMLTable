@@ -35,3 +35,5 @@ class Main{
     }
 }
 ```
+###Result
+![HTML Table generated](example/countries_html.png)
