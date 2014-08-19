@@ -1,5 +1,8 @@
 #Generate HTML Tables
 Generate a beautiful HTML tables to show any data.
+
+![HTML Table generated](example/countries_html.png)
+
 * **Generated CSSs is inline**, to be compatible with the major email clients.
 * The cells of the HTML Table **can also contains HTML** code.
 * The first row of the matrix represents the header of the HTML Table.
@@ -35,5 +38,3 @@ class Main{
     }
 }
 ```
-###Result
-![HTML Table generated](example/countries_html.png)
