@@ -1,5 +1,5 @@
 #Generate HTML Tables
-Generate a beautiful HTML tables to show any data, like this:
+Generate a beautiful HTML tables to show any tabular data, like this:
 
 ![HTML Table generated](example/countries_html.png)
 
