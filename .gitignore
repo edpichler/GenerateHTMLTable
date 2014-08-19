@@ -13,3 +13,4 @@ hs_err_pid*
 /java workspace/easyPNR-html-exporter/.idea
 /java workspace/generate-html-table/generate-HTML-table.iml
 /java workspace/generate-html-table/target/classes
+*.DS_Store
