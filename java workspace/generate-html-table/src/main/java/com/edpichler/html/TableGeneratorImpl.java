@@ -9,24 +9,21 @@ public class TableGeneratorImpl implements TableGenerator {
     public static final String CSS_STYLE_CELL = "display: table-cell; padding: 6px 12px;";
     public static final String CSS_STYLE_ROW_1 = "display: table-row; background-color: #f6f6f6;";
     public static final String CSS_STYLE_ROW_2 = "display: table-row; background-color: #e9e9e9;";
-    public static final String CSS_STYLE_BODY = "font-family: 'Helvetica Neue', Helvetica, Arial; font-size: 11px; line-height: 20px; font-weight: 400; color: #3b3b3b; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; background-color: #2b2b2b;";
+    public static final String CSS_STYLE_WRAPPER = "font-family: 'Helvetica Neue', Helvetica, Arial; font-size: 11px; line-height: 20px; font-weight: 400; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; max-width: 800px; margin: 0 auto; padding: 40px;";
     public static final String CSS_STYLE_HEAD = "display: table-row; font-weight: 900; color: white; background-color: #2980b9;";
-    public static final String CSS_STYLE_WRAPPER = "width: 100%; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); display: table; margin: 0 0 40px;";
+    public static final String CSS_STYLE_TABLE = "width: 100%; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); display: table; margin: 0 0 40px;";
 
     @Override
     public String generateHtmlTable(String[][] matrix) {
 
         //html base
-        DomElement html = new DomElement("html");
-        DomElement body = html.addChild("body");
-        body.setCssStyle(CSS_STYLE_BODY);
 
-        DomElement divWrapper = body.addChild("div");
-        divWrapper.setCssStyle("max-width: 800px; margin: 0 auto; padding: 40px;");
+        DomElement divWrapper = new DomElement("div");
+        divWrapper.setCssStyle(CSS_STYLE_WRAPPER);
 
         //table
         DomElement divTable = divWrapper.addChild("div");
-        divTable.setCssStyle(CSS_STYLE_WRAPPER);
+        divTable.setCssStyle(CSS_STYLE_TABLE);
 
         //table header
         String headers[] = matrix[0];
@@ -43,7 +40,7 @@ public class TableGeneratorImpl implements TableGenerator {
             }
             divTable.addChild(divRow);
         }
-        return html.toString();
+        return divWrapper.toString();
     }
 
     private DomElement  createTableRow(String[] rows) {

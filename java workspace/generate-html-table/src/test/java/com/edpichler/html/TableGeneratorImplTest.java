@@ -26,4 +26,33 @@ public class TableGeneratorImplTest {
         fileWriter.write(x);
         fileWriter.close();
     }
+
+    /**
+     * Generate example table
+     * @throws Exception
+     */
+    @Test
+    public void testGenerateExampleHtmlTable() throws Exception {
+        String[][] matrix = new String[4][3];
+        matrix[0][0] = "Country";
+        matrix[0][1] = "Language";
+        matrix[0][2] = "Currency";
+
+        matrix[1][0] = "Brazil";
+        matrix[1][1] = "Portuguese";
+        matrix[1][2] = "Real";
+
+        matrix[2][0] = "Germany";
+        matrix[2][1] = "Deutsch";
+        matrix[2][2] = "Euro";
+
+        matrix[3][0] = "United States of America";
+        matrix[3][1] = "English";
+        matrix[3][2] = "Dollar";
+
+        String x = new TableGeneratorImpl().generateHtmlTable(matrix).toString();
+        FileWriter fileWriter = new FileWriter(new File("countries.html"));
+        fileWriter.write(x);
+        fileWriter.close();
+    }
 }
