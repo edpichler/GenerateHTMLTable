@@ -12,10 +12,25 @@ Here's an example:
 ```java
 class Main{
     public static void main(String[] args) {
-        TableGenerator gen = new TableGeneratorImpl();
-        String data[][] = new String[2][4]; //two columns and 4 lines (first is the header)
+        String[][] matrix = new String[4][3];
+        matrix[0][0] = "Country";
+        matrix[0][1] = "Language";
+        matrix[0][2] = "Currency";
 
-        String html = gen.generateHtmlTable(data);
+        matrix[1][0] = "Brazil";
+        matrix[1][1] = "Portuguese";
+        matrix[1][2] = "Real";
+
+        matrix[2][0] = "Germany";
+        matrix[2][1] = "Deutsch";
+        matrix[2][2] = "Euro";
+
+        matrix[3][0] = "United States of America";
+        matrix[3][1] = "English";
+        matrix[3][2] = "Dollar";
+
+        String html = new TableGeneratorImpl().generateHtmlTable(matrix).toString();
+        
         System.out.println(html);
     }
 }
