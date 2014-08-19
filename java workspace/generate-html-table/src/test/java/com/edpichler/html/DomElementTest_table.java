@@ -3,6 +3,9 @@ package com.edpichler.html;
 import junit.framework.TestCase;
 import org.junit.Test;
 
+import java.io.File;
+import java.io.FileWriter;
+
 public class DomElementTest_table {
 
     public static final String CSS_STYLE_COLUMN_HEADER1 = "display: table-cell; padding: 6px 12px;";
@@ -22,6 +25,10 @@ public class DomElementTest_table {
         DomElement html = new DomElement("html");
         DomElement body = new DomElement("body");
         body.setCssStyle(CSS_STYLE_BODY);
+
+        DomElement p = body.addChild("p");
+        p.setContent("Conteúdo...");
+
 
         DomElement divWrapper = body.addChild("div");
         divWrapper.setCssStyle("max-width: 800px; margin: 0 auto; padding: 40px;");
@@ -77,7 +84,10 @@ public class DomElementTest_table {
         divCell5.setContent("19:50");
 
         html.addChild(body);
-        System.out.println(html);
+        FileWriter fileWriter = new FileWriter(new File("travel.html"));
+        fileWriter.write(html.toString());
+        fileWriter.close();
+
    }
 
     /**
