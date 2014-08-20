@@ -50,7 +50,7 @@ public class DomElement {
             for (DomElement child : childs) {
                 sb.append(child.toString());
             }
-        }else {
+        }else if (this.content != null) {
             sb.append(this.content);
         }
 
