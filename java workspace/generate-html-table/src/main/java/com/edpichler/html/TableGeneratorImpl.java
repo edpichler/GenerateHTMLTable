@@ -11,7 +11,7 @@ public class TableGeneratorImpl implements TableGenerator {
     public static final String CSS_STYLE_ROW_2 = "display: table-row; background-color: #e9e9e9;";
     public static final String CSS_STYLE_WRAPPER = "font-family: 'Helvetica Neue', Helvetica, Arial; font-size: 11px; line-height: 20px; font-weight: 400; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; max-width: 800px; margin: 0 auto;";
     public static final String CSS_STYLE_HEAD = "display: table-row; font-weight: 900; color: white; background-color: #2980b9;";
-    public static final String CSS_STYLE_TABLE = "width: 100%; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); display: table; margin: 0 0 40px;";
+    public static final String CSS_STYLE_TABLE = "width: 100%; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); display: table;";
 
     @Override
     public String generateHtmlTable(String[][] matrix) {
