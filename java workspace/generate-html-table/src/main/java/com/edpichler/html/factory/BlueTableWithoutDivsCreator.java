@@ -13,7 +13,7 @@ public class BlueTableWithoutDivsCreator {
     public static final String CSS_STYLE_ROW_1 = "background-color: #f6f6f6;";
     public static final String CSS_STYLE_ROW_2 = "background-color: #e9e9e9;";
     public static final String CSS_STYLE_HEAD = "font-weight: 900; color: white; background-color: #2980b9;";
-    public static final String CSS_STYLE_TABLE = "width: 100%; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);";
+    public static final String CSS_STYLE_TABLE = "border: none; border-spacing:0px; width: 100%; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);font-family: 'Helvetica Neue', Helvetica, Arial; font-size: 11px; line-height: 20px; font-weight: 400; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; margin: 0 auto;";
 
     public String createHTML(String[][] matrix) {
 

@@ -11,9 +11,9 @@ public class TableGeneratorImpl implements TableGenerator {
     public String generateHtmlTable(String[][] matrix, TableStyle style) {
         switch (style) {
             case BLUE_TABLE:
-                return new BlueTableWithDivsCreator().createHTML(matrix);
-            case BLUE_TABLE_WITH_DIVS:
                 return new BlueTableWithoutDivsCreator().createHTML(matrix);
+            case BLUE_TABLE_WITH_DIVS:
+                return new BlueTableWithDivsCreator().createHTML(matrix);
         }
         return null;
     }
