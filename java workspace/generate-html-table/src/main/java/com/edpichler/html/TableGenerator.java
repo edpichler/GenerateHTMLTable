@@ -11,8 +11,9 @@ public interface TableGenerator {
      * The first row of the matrix represents the table header, other rows the data.
      *
      * @param matrix the table content.
+     * @param style the style of the table.
      * @return a String with the HTML Table code. Inline CSS.
      */
-    public String generateHtmlTable(String[][] matrix);
+    public String generateHtmlTable(String[][] matrix, TableStyle style);
 
 }

@@ -1,4 +1,4 @@
-package com.edpichler.html;
+package com.edpichler.html.dom;
 
 import java.util.ArrayList;
 import java.util.List;

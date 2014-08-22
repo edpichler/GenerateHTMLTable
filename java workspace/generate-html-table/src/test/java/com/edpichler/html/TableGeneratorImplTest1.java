@@ -6,7 +6,10 @@ import org.junit.Test;
 import java.io.File;
 import java.io.FileWriter;
 
-public class TableGeneratorImplTest {
+/**
+ * Test generating BLUE_TABLE_WITH_DIVS style.
+ * */
+public class TableGeneratorImplTest1 {
 
     /**
      * Generate table with 10 columns and 10 rows.
@@ -21,10 +24,10 @@ public class TableGeneratorImplTest {
             }
         }
 
-        String x = new TableGeneratorImpl().generateHtmlTable(matrix).toString();
-        FileWriter fileWriter = new FileWriter(new File("test.html"));
-        fileWriter.write(x);
-        fileWriter.close();
+        String x = new TableGeneratorImpl().generateHtmlTable(matrix, TableStyle.BLUE_TABLE_WITH_DIVS).toString();
+//        FileWriter fileWriter = new FileWriter(new File("test.html"));
+//        fileWriter.write(x);
+//        fileWriter.close();
     }
 
     /**
@@ -50,9 +53,9 @@ public class TableGeneratorImplTest {
         matrix[3][1] = "English";
         matrix[3][2] = "Dollar";
 
-        String x = new TableGeneratorImpl().generateHtmlTable(matrix).toString();
-        FileWriter fileWriter = new FileWriter(new File("countries.html"));
-        fileWriter.write(x);
-        fileWriter.close();
+        String x = new TableGeneratorImpl().generateHtmlTable(matrix, TableStyle.BLUE_TABLE_WITH_DIVS).toString();
+//        FileWriter fileWriter = new FileWriter(new File("countries.html"));
+//        fileWriter.write(x);
+//        fileWriter.close();
     }
 }

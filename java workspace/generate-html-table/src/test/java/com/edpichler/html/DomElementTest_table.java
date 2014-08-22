@@ -1,5 +1,6 @@
 package com.edpichler.html;
 
+import com.edpichler.html.dom.DomElement;
 import junit.framework.TestCase;
 import org.junit.Test;
 
