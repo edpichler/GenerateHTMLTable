@@ -14,3 +14,5 @@ hs_err_pid*
 /java workspace/generate-html-table/generate-HTML-table.iml
 /java workspace/generate-html-table/target/classes
 *.DS_Store
+
+java workspace/generate-html-table/.idea/**
