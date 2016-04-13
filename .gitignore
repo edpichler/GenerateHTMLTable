@@ -16,3 +16,5 @@ hs_err_pid*
 *.DS_Store
 
 java workspace/generate-html-table/.idea/**
+java workspace/generate-html-table/.gradle/**
+java workspace/generate-html-table/build/**
