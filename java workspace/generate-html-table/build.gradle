@@ -25,29 +25,21 @@ repositories {
     mavenCentral()
 }
 
-
 uploadArchives {
     repositories {
         mavenDeployer {
             def credentials = [
-                    userName: NEXUS_EASYPNR_USERNAME,
-                    password: NEXUS_EASYPNR_PASSWORD
+                    userName:  "$System.env.NEXUS_EASYPNR_USERNAME",
+                    password:  "$System.env.NEXUS_EASYPNR_PASSWORD"
             ]
             configuration = configurations.deployerJars
 
-            //TODO CREATE A PUBLIC REPOSITORY
-            repository(url: "http://nexus.lupazul.com/content/repositories/easypnr-releases") {
+            repository(url: "http://curitiba.easypnr.com:8081/artifactory/easypnr") {
                 authentication(credentials)
             }
-            snapshotRepository(url: "http://nexus.lupazul.com/content/repositories/easypnr-snapshots") {
+            snapshotRepository(url: "http://curitiba.easypnr.com:8081/artifactory/easypnr") {
                 authentication(credentials)
             }
         }
     }
 }
-
-/*test {
-    environment 'EASYPNR_JDBC_URL', EASYPNR_JDBC_URL
-    environment 'EASYPNR_JDBC_PASSWORD', EASYPNR_JDBC_PASSWORD
-    environment 'EASYPNR_JDBC_USER', EASYPNR_JDBC_USER
-}*/
