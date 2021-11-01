@@ -8,14 +8,14 @@ Generate a beautiful HTML tables to show any tabular data, like this:
 * The first row of the matrix represents the header of the HTML Table.
 
 
-##How to use
+## How to use it
 Create a matrix representing your data. As said before, the matrix also can have HTML as content.
 Here's an example:
 
 ```java
 class Main{
-    public static void main(String[] args) {
-        String[][] matrix = new String[4][3];
+    public static void main(final String[] args) {
+        final String[][] matrix = new String[4][3];
         matrix[0][0] = "Country";
         matrix[0][1] = "Language";
         matrix[0][2] = "Currency";
@@ -32,7 +32,7 @@ class Main{
         matrix[3][1] = "English";
         matrix[3][2] = "Dollar";
 
-        String html = new TableGeneratorImpl().generateHtmlTable(matrix).toString();
+        final String html = new TableGeneratorImpl().generateHtmlTable(matrix).toString();
         
         System.out.println(html);
     }
