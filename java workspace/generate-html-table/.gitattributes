@@ -1,0 +1,2 @@
+# Example
+gradle.properties filter=git-crypt diff=git-crypt
